@@ -1,0 +1,58 @@
+{
+  "name": "missile-defense",
+  "version": "0.0.1",
+  "description": "Do national security better than Michael Flynn",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "grunt test:unit"
+  },
+  "keywords": [
+    "aws",
+    "lambda"
+  ],
+  "author": "Vamshi K Ponnapalli <vamshi.ponnapalli@analog.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "esformatter-ignore": "^0.1.3",
+    "esformatter-remove-trailing-commas": "^1.0.1",
+    "grunt": "^1.0.1",
+    "grunt-aws-cloudformation": "^0.1.0",
+    "grunt-aws-lambda": "^0.13.0",
+    "grunt-aws-s3": "^0.14.5",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-esformatter": "^1.2.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-mocha-istanbul": "^5.0.1",
+    "grunt-wysknd-aws-cf-generator": "^3.2.0",
+    "istanbul": "^0.4.4",
+    "load-grunt-tasks": "^3.5.0",
+    "mocha": "^3.0.2",
+    "rewire": "^2.5.2",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0",
+    "time-grunt": "^1.4.0",
+    "wysknd-aws-cf-generator": "^2.5.0",
+    "wysknd-lib": "0.0.2",
+    "wysknd-log": "0.0.4",
+    "wysknd-test": "^3.1.0"
+  },
+  "dependencies": {
+    "ajv": "^4.2.0",
+    "aws-sdk": "^2.5.0",
+    "wysknd-args": "^0.0.1",
+    "wysknd-aws-lambda": "^0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vamship/missile-defense.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vamship/missile-defense/issues"
+  },
+  "homepage": "https://github.com/vamship/missile-defense#readme"
+}

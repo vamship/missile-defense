@@ -1,0 +1,12 @@
+{
+    "lambdas": [
+        {
+            "functionName": "md-create_launch_record",
+            "handlerName": "index.createLaunchRecordHandler",
+            "fileName": "create-launch-record-handler",
+            "description": "Create a launch record in dynamo db",
+            "memory": 128,
+            "timeout": 3
+        }
+    ]
+}

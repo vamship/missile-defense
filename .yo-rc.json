@@ -1,0 +1,16 @@
+{
+  "generator-aws-microservice": {
+    "projectName": "missile-defense",
+    "projectPrefix": "md",
+    "projectDescription": "Do national security better than Michael Flynn",
+    "projectTargetEnvironments": [
+      "dev",
+      "prod"
+    ],
+    "authorName": "Vamshi K Ponnapalli",
+    "authorEmail": "vamshi.ponnapalli@analog.com",
+    "githubUsername": "vamship",
+    "awsProfile": "default",
+    "awsRegion": "us-east-1"
+  }
+}
