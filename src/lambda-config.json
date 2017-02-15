@@ -7,6 +7,22 @@
             "description": "Create a launch record in dynamo db",
             "memory": 128,
             "timeout": 3
+        },
+        {
+            "functionName": "md-flag_alerts",
+            "handlerName": "index.flagAlertsHandler",
+            "fileName": "flag-alerts-handler",
+            "description": "Review launch records and flag alerts",
+            "memory": 128,
+            "timeout": 3
+        },
+        {
+            "functionName": "md-list_alerts",
+            "handlerName": "index.listAlertsHandler",
+            "fileName": "list-alerts-handler",
+            "description": "Return a list of alerts",
+            "memory": 128,
+            "timeout": 3
         }
     ]
 }
