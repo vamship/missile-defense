@@ -2,19 +2,13 @@
 
 const ApiGatewayTemplates = require('wysknd-aws-cf-generator').ApiGatewayTemplates;
 const MethodTemplate = ApiGatewayTemplates.MethodTemplate;
-const _mappingHelper = ApiGatewayTemplates.mappingTemplateHelper;
 
 module.exports = (dirInfo) => {
     const method = 'GET';
     const methodKey = dirInfo.getToken(method);
 
-    //TODO: This request template must be filled out with an appropriate mapping
-    //of the HTTP request to the parameters required by the back end.
-    const requestTemplate = `{
-}`;
+    const requestTemplate = `{}`;
 
-    //TODO: This request template must be filled out with an appropriate mapping
-    //of the HTTP response to the response  required by teh caller
     const responseTemplate = `$input.json('$')`;
 
     return (new MethodTemplate(methodKey))

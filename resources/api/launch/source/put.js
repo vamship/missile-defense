@@ -5,16 +5,25 @@ const MethodTemplate = ApiGatewayTemplates.MethodTemplate;
 const _mappingHelper = ApiGatewayTemplates.mappingTemplateHelper;
 
 module.exports = (dirInfo) => {
-    const method = 'GET';
+    const method = 'PUT';
     const methodKey = dirInfo.getToken(method);
 
-    //TODO: This request template must be filled out with an appropriate mapping
-    //of the HTTP request to the parameters required by the back end.
     const requestTemplate = `{
+${_mappingHelper.mapProperty('source', 'source', {
+        source: 'url',
+        noComma: true
+    })}
+${_mappingHelper.mapProperty('$.latitude', 'latitude', {
+        noQuotes: true
+    })}
+${_mappingHelper.mapProperty('$.longitude', 'longitude', {
+        noQuotes: true
+    })}
+${_mappingHelper.mapProperty('$.timestamp', 'timestamp', {
+        noQuotes: true
+    })}
 }`;
 
-    //TODO: This request template must be filled out with an appropriate mapping
-    //of the HTTP response to the response  required by teh caller
     const responseTemplate = `$input.json('$')`;
 
     return (new MethodTemplate(methodKey))
@@ -23,7 +32,7 @@ module.exports = (dirInfo) => {
         .setHttpMethod(method)
         .setAuthorizer(false)
         .setBackendLambda('md-create_launch_record')
-        // .setRequestPath('userId', true) //TODO: Add references to dynamic path elements (ex: /users/{userId})
+        .setRequestPath('source', true)
         .setRequestTemplate(requestTemplate, 'application/json')
         .setRequestModel('Empty')
         .setDefaultIntegrationResponses()
