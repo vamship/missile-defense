@@ -1,5 +1,8 @@
 'use strict';
 
+const _awsSdk = require('aws-sdk');
+const _awsDynamoDb = require('aws-dynamodb');
+
 /**
  * Return a list of alerts
  *
@@ -12,8 +15,23 @@
  */
 module.exports = function(event, context, callback, ext) {
     const logger = ext.logger;
-    const config = ext.config;
 
-    //TODO: Implement function and invoke callback.
-    callback(null, 'Lambda function [list_alerts] executed successfully');
+    const table = 'md-alerts-dev';
+    logger.info(`Accessing table: [${table}]`);
+    const startTime = Date.now();
+
+    const dynamoDbClient = _awsDynamoDb(new _awsSdk.DynamoDB());
+    dynamoDbClient
+        .table(table)
+        .scan((err, data) => {
+            const endTime = Date.now();
+            logger.debug(`Query duration: [${endTime - startTime} ms]`);
+            if (err) {
+                logger.error(err, 'Error querying alert records');
+                callback('[Error] Error querying alert records');
+                return;
+            }
+            logger.info(`Alert list fetched successfully`);
+            callback(null, data);
+        });
 };

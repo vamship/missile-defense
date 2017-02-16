@@ -1,7 +1,7 @@
 /* jshint node:true, expr:true */
 'use strict';
 
-const _sinon = require('sinon');
+// const _sinon = require('sinon');
 const _chai = require('chai');
 _chai.use(require('sinon-chai'));
 _chai.use(require('chai-as-promised'));
@@ -13,12 +13,12 @@ _loggerProvider.enableMock();
 const _rewire = require('rewire');
 const _testHelper = require('wysknd-test');
 const LambdaWrapper = _testHelper.aws.LambdaWrapper;
-const _testValueProvider = _testHelper.testValueProvider;
-const _testUtils = _testHelper.utils;
+// const _testValueProvider = _testHelper.testValueProvider;
+// const _testUtils = _testHelper.utils;
 
 let _handler = null;
 
-describe('[index.listAlertsHandler]', () => {
+xdescribe('[index.listAlertsHandler]', () => {
     function _createWrapper(event, alias, config) {
         event = event || {};
 
