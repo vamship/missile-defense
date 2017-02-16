@@ -331,7 +331,7 @@ module.exports = function(grunt) {
             options: {
                 tokens: {
                     // TODO: Review and update as necessary.
-                    // lambda_invoke_role: 'md-api_gateway_role',
+                    lambda_invoke_role: 'md-api_gateway_role',
                     // s3_invoke_role: 'md-api_gateway_role',
                     cors_origin: '\'*\''
                 },
