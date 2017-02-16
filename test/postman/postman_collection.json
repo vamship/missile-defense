@@ -1,0 +1,52 @@
+{
+	"id": "0a96a0a9-52f2-cbbb-693a-cc4d13ed27bc",
+	"name": "Missile Defense Tests",
+	"description": "",
+	"order": [
+		"d730ccc1-e8ab-5cc2-c144-18acfd67a398",
+		"25a4f526-6522-fb01-a963-ada65c47408a"
+	],
+	"folders": [],
+	"timestamp": 1487254885825,
+	"owner": "1148460",
+	"public": false,
+	"requests": [
+		{
+			"id": "25a4f526-6522-fb01-a963-ada65c47408a",
+			"headers": "Content-Type: application/json\n",
+			"url": "<STAGE_URL>/launch/tracker03",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487255709207,
+			"name": "Create Launch Record",
+			"description": "Remember that the source (url parameter) and timestamp (body) make a unique key. Clicking on \"send\" multiple times will result in an error!",
+			"collectionId": "0a96a0a9-52f2-cbbb-693a-cc4d13ed27bc",
+			"responses": [],
+			"rawModeData": "{\n\t\"latitude\": 38.36,\n\t\"longitude\": 127.05,\n\t\"timestamp\": 1487096720000\n}"
+		},
+		{
+			"id": "d730ccc1-e8ab-5cc2-c144-18acfd67a398",
+			"headers": "Accept: application/json\n",
+			"url": "<STAGE_URL>/alerts",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487255706597,
+			"name": "Fetch Alert List",
+			"description": "",
+			"collectionId": "0a96a0a9-52f2-cbbb-693a-cc4d13ed27bc",
+			"responses": []
+		}
+	]
+}
