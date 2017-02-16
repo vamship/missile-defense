@@ -43,7 +43,9 @@
   },
   "dependencies": {
     "ajv": "^4.2.0",
+    "aws-dynamodb": "^0.1.64",
     "aws-sdk": "^2.5.0",
+    "shortid": "^2.2.6",
     "wysknd-args": "^0.0.1",
     "wysknd-aws-lambda": "^0.2.0"
   },
