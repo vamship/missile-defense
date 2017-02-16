@@ -23,6 +23,5 @@ module.exports = (dirInfo) => {
         .setDefaultIntegrationResponses()
         .setResponseHeader('Access-Control-Allow-Origin', '<% cors_origin %>')
         .setResponseTemplate(responseTemplate, 'application/json', '200')
-        .setResponseModel('Empty', 'application/json', '200')
-        ;
+        .setResponseModel('Empty', 'application/json', '200');
 };
